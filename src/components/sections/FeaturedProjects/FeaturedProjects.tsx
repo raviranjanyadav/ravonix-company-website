@@ -1,116 +1,313 @@
+import { motion } from "framer-motion";
+
 import Container from "@/components/ui/Container/Container";
 import { projects } from "./projectData";
 
 
 const FeaturedProjects = () => {
+
+
   return (
-    <section className="py-24 bg-white">
+
+    <section className="
+      bg-white
+      py-20
+      sm:py-24
+    ">
+
+
       <Container>
 
+
         {/* Heading */}
-        <div className="max-w-3xl mb-14">
-          <p className="text-sm font-semibold tracking-widest text-blue-600 uppercase">
+
+        <motion.div
+
+          initial={{
+            opacity:0,
+            y:30
+          }}
+
+          whileInView={{
+            opacity:1,
+            y:0
+          }}
+
+          viewport={{
+            once:true
+          }}
+
+          transition={{
+            duration:0.6
+          }}
+
+          className="
+            mb-14
+            max-w-3xl
+          "
+
+        >
+
+
+          <p className="
+            text-sm
+            font-semibold
+            uppercase
+            tracking-widest
+            text-blue-600
+          ">
+
             Our Work
+
           </p>
 
-          <h2 className="mt-3 text-4xl md:text-5xl font-bold text-gray-900">
+
+
+          <h2 className="
+            mt-3
+            text-4xl
+            font-bold
+            text-slate-900
+            sm:text-5xl
+          ">
+
             Featured Projects
+
           </h2>
 
-          <p className="mt-5 text-gray-600 text-lg">
+
+
+
+          <p className="
+            mt-5
+            text-base
+            leading-relaxed
+            text-slate-600
+            sm:text-lg
+          ">
+
             Building scalable digital solutions that help businesses grow,
             automate and transform.
+
           </p>
-        </div>
 
 
-        {/* Projects */}
-        <div className="grid md:grid-cols-3 gap-8">
+        </motion.div>
 
-          {projects.map((project,index)=>(
-            <div
-              key={index}
+
+
+
+
+
+
+        {/* Project Cards */}
+
+
+        <div className="
+          grid
+          gap-8
+          md:grid-cols-2
+          xl:grid-cols-3
+        ">
+
+
+        {
+          projects.map((project,index)=>(
+
+
+            <motion.div
+
+              key={project.title}
+
+              initial={{
+                opacity:0,
+                y:40
+              }}
+
+              whileInView={{
+                opacity:1,
+                y:0
+              }}
+
+              viewport={{
+                once:true
+              }}
+
+              transition={{
+                duration:0.5,
+                delay:index * 0.15
+              }}
+
+
+
               className="
-              group
-              relative
-              rounded-3xl
-              border
-              border-gray-200
-              p-8
-              bg-white
-              transition-all
-              duration-300
-              hover:-translate-y-2
-              hover:shadow-xl
+                group
+                relative
+                overflow-hidden
+                rounded-3xl
+                border
+                border-slate-200
+                bg-white
+                p-8
+                transition-all
+                duration-300
+                hover:-translate-y-3
+                hover:border-blue-500
+                hover:shadow-2xl
               "
+
             >
 
+
+
               {/* Number */}
-              <span className="
-              text-sm
-              font-semibold
-              text-gray-400
+
+              <div className="
+                flex
+                h-10
+                w-10
+                items-center
+                justify-center
+                rounded-xl
+                bg-blue-50
+                text-sm
+                font-bold
+                text-blue-600
               ">
+
                 0{index+1}
-              </span>
+
+              </div>
+
+
+
+
+
 
 
               <h3 className="
-              mt-6
-              text-2xl
-              font-semibold
-              text-gray-900
+                mt-6
+                text-2xl
+                font-bold
+                text-slate-900
               ">
+
                 {project.title}
+
               </h3>
 
 
-              <p className="
-              mt-3
-              text-sm
-              font-medium
-              text-blue-600
+
+
+
+
+
+              {/* Tech Badge */}
+
+              <div className="
+                mt-4
+                inline-flex
+                rounded-full
+                bg-slate-100
+                px-4
+                py-2
+                text-sm
+                font-medium
+                text-blue-600
               ">
+
                 {project.tech}
-              </p>
+
+              </div>
+
+
+
+
+
 
 
               <p className="
-              mt-5
-              text-gray-600
-              leading-relaxed
+                mt-5
+                leading-relaxed
+                text-slate-600
               ">
+
                 {project.description}
+
               </p>
+
+
+
+
+
 
 
               <button
-              className="
-              mt-8
-              flex
-              items-center
-              gap-2
-              font-semibold
-              text-gray-900
-              group-hover:text-blue-600
-              transition
-              "
+
+                className="
+                  mt-8
+                  flex
+                  items-center
+                  gap-2
+                  font-semibold
+                  text-slate-900
+                  transition-all
+                  group-hover:gap-4
+                  group-hover:text-blue-600
+                "
+
               >
+
                 View Project
+
                 <span>
+
                   →
+
                 </span>
+
+
               </button>
 
 
-            </div>
-          ))}
+
+
+
+              {/* Hover Glow */}
+
+              <div className="
+                absolute
+                -right-20
+                -top-20
+                h-40
+                w-40
+                rounded-full
+                bg-blue-500/10
+                blur-3xl
+                transition
+                group-hover:bg-blue-500/20
+              "/>
+
+
+            </motion.div>
+
+
+          ))
+        }
+
 
         </div>
 
+
+
       </Container>
+
+
     </section>
+
   );
+
 };
+
 
 export default FeaturedProjects;
