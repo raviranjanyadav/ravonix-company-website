@@ -1,68 +1,123 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Plus, Minus } from "lucide-react";
+
 import Container from "@/components/ui/Container/Container";
 import { faqData } from "./faqData";
 
 
 const FAQ = () => {
 
+
   const [active, setActive] = useState<number | null>(null);
+
 
 
   return (
 
-    <section className="py-24 bg-white">
+    <section className="
+      bg-white
+      py-20
+      sm:py-24
+    ">
+
 
       <Container>
 
 
+
         {/* Heading */}
 
-        <div className="max-w-3xl mx-auto text-center">
+
+        <motion.div
+
+          initial={{
+            opacity:0,
+            y:30
+          }}
+
+          whileInView={{
+            opacity:1,
+            y:0
+          }}
+
+          viewport={{
+            once:true
+          }}
+
+          transition={{
+            duration:0.6
+          }}
+
+          className="
+            mx-auto
+            max-w-3xl
+            text-center
+          "
+
+        >
 
 
           <p className="
-          text-sm
-          uppercase
-          tracking-widest
-          font-semibold
-          text-blue-600
+            text-sm
+            font-semibold
+            uppercase
+            tracking-widest
+            text-blue-600
           ">
+
             FAQ
+
           </p>
+
+
 
 
           <h2 className="
-          mt-3
-          text-4xl
-          md:text-5xl
-          font-bold
-          text-gray-900
+            mt-3
+            text-4xl
+            font-bold
+            text-slate-900
+            sm:text-5xl
           ">
+
             Frequently Asked Questions
+
           </h2>
 
 
+
+
+
           <p className="
-          mt-5
-          text-gray-600
-          text-lg
+            mt-5
+            text-base
+            text-slate-600
+            sm:text-lg
           ">
+
             Everything you need to know about our services and process.
+
           </p>
 
 
-        </div>
+        </motion.div>
+
+
+
+
 
 
 
         {/* Accordion */}
 
 
+
         <div className="
-        max-w-3xl
-        mx-auto
-        mt-14
-        space-y-4
+          mx-auto
+          mt-14
+          max-w-3xl
+          space-y-4
         ">
 
 
@@ -70,66 +125,189 @@ const FAQ = () => {
           faqData.map((item,index)=>(
 
 
-            <div
-            key={index}
-            className="
-            border
-            border-gray-200
-            rounded-2xl
-            overflow-hidden
-            "
+            <motion.div
+
+
+              key={item.question}
+
+
+              initial={{
+                opacity:0,
+                y:20
+              }}
+
+
+              whileInView={{
+                opacity:1,
+                y:0
+              }}
+
+
+              viewport={{
+                once:true
+              }}
+
+
+              transition={{
+                duration:0.4,
+                delay:index * 0.1
+              }}
+
+
+
+              className="
+                overflow-hidden
+                rounded-2xl
+                border
+                border-slate-200
+                bg-white
+                transition
+                hover:border-blue-400
+              "
+
+
             >
 
 
+
+              {/* Question */}
+
+
               <button
-              onClick={()=> 
-                setActive(active === index ? null : index)
-              }
-              className="
-              w-full
-              flex
-              justify-between
-              items-center
-              p-6
-              text-left
-              font-semibold
-              text-gray-900
-              "
+
+                onClick={()=> 
+                  setActive(
+                    active === index 
+                    ? null 
+                    : index
+                  )
+                }
+
+
+                className="
+                  flex
+                  w-full
+                  items-center
+                  justify-between
+                  gap-4
+                  p-6
+                  text-left
+                  font-semibold
+                  text-slate-900
+                "
+
               >
 
-                {item.question}
+
+                <span>
+
+                  {item.question}
+
+                </span>
+
+
 
 
                 <span className="
-                text-xl
-                text-blue-600
+                  flex
+                  h-8
+                  w-8
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-blue-50
+                  text-blue-600
                 ">
-                  {active === index ? "-" : "+"}
+
+
+                  {
+                    active === index
+                    ?
+                    <Minus size={18}/>
+                    :
+                    <Plus size={18}/>
+                  }
+
+
                 </span>
+
 
 
               </button>
 
 
 
+
+
+
+
+              {/* Answer */}
+
+
+              <AnimatePresence>
+
+
               {
                 active === index && (
 
-                  <div className="
-                  px-6
-                  pb-6
-                  text-gray-600
-                  leading-relaxed
-                  ">
-                    {item.answer}
-                  </div>
+                  <motion.div
+
+
+                    initial={{
+                      height:0,
+                      opacity:0
+                    }}
+
+
+                    animate={{
+                      height:"auto",
+                      opacity:1
+                    }}
+
+
+                    exit={{
+                      height:0,
+                      opacity:0
+                    }}
+
+
+                    transition={{
+                      duration:0.3
+                    }}
+
+
+                    className="
+                      overflow-hidden
+                    "
+
+                  >
+
+
+                    <p className="
+                      px-6
+                      pb-6
+                      leading-relaxed
+                      text-slate-600
+                    ">
+
+                      {item.answer}
+
+                    </p>
+
+
+                  </motion.div>
 
                 )
               }
 
 
+              </AnimatePresence>
 
-            </div>
+
+
+
+            </motion.div>
 
 
           ))
@@ -139,12 +317,14 @@ const FAQ = () => {
         </div>
 
 
+
       </Container>
 
 
     </section>
 
   );
+
 };
 
 
