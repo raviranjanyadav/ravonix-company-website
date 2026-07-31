@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@import "./styles/design-tokens.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-heading);
+}
+
+* {
+  box-sizing: border-box;
+}
