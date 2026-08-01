@@ -4,16 +4,7 @@ import MainLayout from "@/layouts/MainLayout";
 import Home from "@/pages/Home/Home";
 import About from "@/pages/About/About";
 
-const routes = [
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-];
+
 
 const router = createBrowserRouter([
   {
