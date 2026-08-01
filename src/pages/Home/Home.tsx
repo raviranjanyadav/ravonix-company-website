@@ -11,7 +11,8 @@ import FeaturedProjects from "@/components/sections/FeaturedProjects/FeaturedPro
 import Testimonials from "@/components/sections/Testimonials/Testimonials";
 import FAQ from "@/components/sections/FAQ/FAQ";
 import CTA from "@/components/sections/CTA/CTA";
-import Footer from "@/components/sections/Footer/Footer";
+import Background from "@/components/ui/Background/Background";
+
 
 
 
@@ -20,7 +21,7 @@ function Home() {
 
   return (
 
-    <>
+    <Background>
 
       <Helmet>
   {/* Primary SEO */}
@@ -97,10 +98,10 @@ function Home() {
 
       <CTA />
 
-      <Footer />
+      
 
 
-    </>
+    </Background>
 
   );
 
