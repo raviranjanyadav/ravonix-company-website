@@ -23,92 +23,53 @@ function Home() {
     <>
 
       <Helmet>
+  {/* Primary SEO */}
+  <title>
+    RAVONIX Technologies | Custom Software & AI Solutions
+  </title>
 
+  <meta
+    name="description"
+    content="
+    RAVONIX delivers enterprise-grade CRM, ERP, AI, and cloud-based software solutions.
+    We help businesses accelerate digital transformation with scalable web and mobile applications.
+    "
+  />
 
-        {/* Primary SEO */}
+  <meta
+    name="keywords"
+    content="
+    custom software solutions,
+    enterprise CRM development,
+    cloud ERP systems,
+    AI powered applications,
+    web and mobile app development,
+    digital transformation services,
+    IT consulting and automation
+    "
+  />
 
-        <title>
-          RAVONIX Technologies | Software Development Company
-        </title>
+  {/* Open Graph */}
+  <meta
+    property="og:title"
+    content="RAVONIX Technologies | Custom Software & AI Solutions"
+  />
+  <meta
+    property="og:description"
+    content="Enterprise-grade CRM, ERP, AI and cloud solutions for modern businesses."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ravonix.com" />
 
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RAVONIX Technologies" />
+  <meta
+    name="twitter:description"
+    content="Premium software development and digital transformation solutions."
+  />
+</Helmet>
 
-        <meta
-          name="description"
-          content="
-          RAVONIX builds scalable CRM, ERP, AI and custom software solutions
-          for modern businesses with innovative technology.
-          "
-        />
-
-
-        <meta
-          name="keywords"
-          content="
-          software development company,
-          CRM development,
-          ERP solutions,
-          AI solutions,
-          web development,
-          mobile app development
-          "
-        />
-
-
-
-
-
-        {/* Open Graph */}
-
-        <meta
-          property="og:title"
-          content="RAVONIX Technologies | Software Development Company"
-        />
-
-
-        <meta
-          property="og:description"
-          content="Building scalable digital solutions with modern technologies."
-        />
-
-
-        <meta
-          property="og:type"
-          content="website"
-        />
-
-
-
-        <meta
-          property="og:url"
-          content="https://ravonix.com"
-        />
-
-
-
-
-
-        {/* Twitter */}
-
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-        />
-
-
-        <meta
-          name="twitter:title"
-          content="RAVONIX Technologies"
-        />
-
-
-        <meta
-          name="twitter:description"
-          content="Premium software development and digital transformation solutions."
-        />
-
-
-
-      </Helmet>
 
 
 

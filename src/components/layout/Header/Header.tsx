@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "@/assets/Ravonix.svg";
+import logo from "@/assets/icons/Ravonix.svg";
 
 
 const navLinks = [

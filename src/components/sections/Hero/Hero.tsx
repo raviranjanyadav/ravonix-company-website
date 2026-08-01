@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button/Button";
 import Container from "@/components/ui/Container/Container";
+import Background from "@/components/ui/Background/Background";
 
 
 function Hero() {
@@ -8,13 +9,8 @@ function Hero() {
 
   return (
 
-    <section className="
-      relative
-      overflow-hidden
-      py-16
-      sm:py-20
-      lg:py-32
-    ">
+    <Background>
+<section className="relative py-24 lg:py-32">
 
 
       {/* Background Glow */}
@@ -356,8 +352,8 @@ function Hero() {
 
       </Container>
 
-
-    </section>
+</section>
+</Background>
 
   );
 
