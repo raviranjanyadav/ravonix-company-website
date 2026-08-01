@@ -7,10 +7,11 @@ import LeadershipTeam from "./LeadershipTeam/LeadershipTeam";
 import TechnologyStack from "./TechnologyStack/TechnologyStack";
 import CompanyStats from "./CompanyStats/CompanyStats";
 import AboutCTA from "./AboutCTA/AboutCTA";
+import Background from "@/components/ui/Background/Background";
 
 function About() {
   return (
-    <>
+    <Background>
       <AboutHero />
 
       <CompanyStory />
@@ -28,7 +29,7 @@ function About() {
       <CompanyStats />
 
       <AboutCTA />
-    </>
+    </Background>
   );
 }
 

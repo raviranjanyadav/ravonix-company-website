@@ -1,35 +1,31 @@
 import { motion } from "framer-motion";
+
 import Button from "@/components/ui/Button/Button";
 import Container from "@/components/ui/Container/Container";
 
 
-function Hero() {
-
+function ServicesHero() {
 
   return (
-
-    
-<section className="relative py-24 lg:py-32">
-
+    <section className="relative py-24 lg:py-32">
 
       {/* Background Glow */}
 
-      <div className="
-        absolute
-        -top-20
-        right-0
-        h-72
-        w-72
-        rounded-full
-        bg-blue-500/20
-        blur-3xl
-      "
+      <div
+        className="
+          absolute
+          -top-20
+          right-0
+          h-72
+          w-72
+          rounded-full
+          bg-blue-500/20
+          blur-3xl
+        "
       />
 
 
-
       <Container>
-
 
         <div className="
           grid
@@ -39,31 +35,23 @@ function Hero() {
         ">
 
 
-
           {/* Left Content */}
-
 
           <div>
 
 
-            {/* Badge */}
-
             <motion.p
-
               initial={{
-                opacity:0,
-                y:20
+                opacity: 0,
+                y: 20,
               }}
-
               animate={{
-                opacity:1,
-                y:0
+                opacity: 1,
+                y: 0,
               }}
-
               transition={{
-                duration:0.5
+                duration: 0.5,
               }}
-
               className="
                 mb-4
                 text-sm
@@ -72,38 +60,25 @@ function Hero() {
                 tracking-wider
                 text-blue-600
               "
-
             >
-
-              Digital Transformation Partner
-
+              Our Services
             </motion.p>
 
 
 
-
-
-
-            {/* Heading */}
-
             <motion.h1
-
               initial={{
-                opacity:0,
-                y:30
+                opacity: 0,
+                y: 30,
               }}
-
               animate={{
-                opacity:1,
-                y:0
+                opacity: 1,
+                y: 0,
               }}
-
               transition={{
-                duration:0.6,
-                delay:0.1
+                duration: 0.6,
+                delay: 0.1,
               }}
-
-
               className="
                 text-4xl
                 font-bold
@@ -112,47 +87,33 @@ function Hero() {
                 sm:text-5xl
                 lg:text-6xl
               "
-
             >
 
               Building
 
               <span className="text-blue-600">
-                {" "}Future Ready
+                {" "}Digital Solutions
               </span>
 
-              Digital Solutions
-
+              That Drive Growth
 
             </motion.h1>
 
 
 
-
-
-
-
-            {/* Description */}
-
-
             <motion.p
-
               initial={{
-                opacity:0,
-                y:30
+                opacity: 0,
+                y: 30,
               }}
-
               animate={{
-                opacity:1,
-                y:0
+                opacity: 1,
+                y: 0,
               }}
-
               transition={{
-                duration:0.6,
-                delay:0.2
+                duration: 0.6,
+                delay: 0.2,
               }}
-
-
               className="
                 mt-6
                 max-w-xl
@@ -161,43 +122,27 @@ function Hero() {
                 text-slate-600
                 sm:text-lg
               "
-
             >
-
               RAVONIX helps businesses transform ideas into
-              scalable software solutions with modern
-              technologies and innovative strategies.
-
-
+              powerful software products with modern
+              technologies, automation and scalable architecture.
             </motion.p>
 
 
 
-
-
-
-
-            {/* CTA */}
-
-
             <motion.div
-
               initial={{
-                opacity:0,
-                y:20
+                opacity: 0,
+                y: 20,
               }}
-
               animate={{
-                opacity:1,
-                y:0
+                opacity: 1,
+                y: 0,
               }}
-
               transition={{
-                duration:0.6,
-                delay:0.3
+                duration: 0.6,
+                delay: 0.3,
               }}
-
-
               className="
                 mt-8
                 flex
@@ -205,21 +150,14 @@ function Hero() {
                 gap-4
                 sm:flex-row
               "
-
             >
 
-
               <Button>
-
-                Start Project
-
+                Start Your Project
               </Button>
 
 
-
-
               <button
-
                 className="
                   rounded-xl
                   border
@@ -231,17 +169,12 @@ function Hero() {
                   transition
                   hover:bg-slate-100
                 "
-
               >
-
-                View Services
-
+                Explore Services
               </button>
 
 
-
             </motion.div>
-
 
 
           </div>
@@ -249,34 +182,23 @@ function Hero() {
 
 
 
-
-
-
-
-
           {/* Right Visual */}
-
 
           <motion.div
 
-
             initial={{
-              opacity:0,
-              scale:0.9
+              opacity: 0,
+              scale: 0.9,
             }}
-
 
             animate={{
-              opacity:1,
-              scale:1
+              opacity: 1,
+              scale: 1,
             }}
-
 
             transition={{
-              duration:0.7,
-              delay:0.2
+              duration: 0.7,
             }}
-
 
             className="
               relative
@@ -293,70 +215,48 @@ function Hero() {
               sm:h-[400px]
             "
 
-
           >
 
-
-            {/* Inner Glow */}
-
-            <div className="
-              absolute
-              h-40
-              w-40
-              rounded-full
-              bg-white/20
-              blur-3xl
-            "
+            <div
+              className="
+                absolute
+                h-40
+                w-40
+                rounded-full
+                bg-white/20
+                blur-3xl
+              "
             />
 
 
-
-
-            <div className="
-              relative
-              text-center
-            ">
-
+            <div className="relative text-center">
 
               <h2 className="
                 text-4xl
                 font-bold
                 sm:text-5xl
               ">
-
                 RAVONIX
-
               </h2>
 
 
               <p className="mt-3 text-lg">
-
-                Software Innovation
-
+                Technology Services
               </p>
 
-
             </div>
-
 
 
           </motion.div>
 
 
-
-
-
         </div>
-
 
       </Container>
 
-</section>
-
-
+    </section>
   );
-
 }
 
 
-export default Hero;
+export default ServicesHero;
