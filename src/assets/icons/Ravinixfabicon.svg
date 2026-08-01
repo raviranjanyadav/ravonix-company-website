@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Multi-color premium gradient -->
+    <linearGradient id="multiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF0080"/>
+      <stop offset="25%" stop-color="#FF7B00"/>
+      <stop offset="50%" stop-color="#00FF7B"/>
+      <stop offset="75%" stop-color="#00A2FF"/>
+      <stop offset="100%" stop-color="#7B00FF"/>
+    </linearGradient>
+
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Transparent background -->
+
+  <!-- RX text in signature style -->
+  <text x="50%" y="60%" text-anchor="middle"
+        font-family="cursive"
+        font-size="55"
+        font-weight="700"
+        fill="url(#multiGrad)"
+        filter="url(#glow)">
+    RX
+  </text>
+</svg>
