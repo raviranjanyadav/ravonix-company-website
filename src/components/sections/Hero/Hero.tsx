@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button/Button";
 import Container from "@/components/ui/Container/Container";
-import Background from "@/components/ui/Background/Background";
 
 
 function Hero() {
@@ -9,7 +8,7 @@ function Hero() {
 
   return (
 
-    <Background>
+    
 <section className="relative py-24 lg:py-32">
 
 
@@ -353,7 +352,7 @@ function Hero() {
       </Container>
 
 </section>
-</Background>
+
 
   );
 
