@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 
 import Container from "@/components/ui/Container/Container";
 import ServiceCard from "./ServiceCard";
+import Background from "@/components/ui/Background/Background";
+
 
 import {
   Monitor,
@@ -58,6 +60,7 @@ function Services() {
 
 
   return (
+    <Background>
 
     <section className="
       py-20
@@ -215,6 +218,7 @@ function Services() {
 
     </section>
 
+</Background>
   );
 
 }
